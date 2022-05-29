@@ -1,0 +1,159 @@
+.hero-section {
+  background: #FF8482;
+  width: 100%;
+  height: 768px;
+  padding-top: 72px;
+}
+
+.hero-section img {
+  width: 100%;
+  height: auto;
+}
+
+.navBar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 16px;
+  display: flex;
+  background: #FF8482;
+  
+}
+
+.navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 16px 48px;
+  display: none;
+}
+/*預設是關閉的 下方設定超過992顯示尺寸才會出現flex的型態*/
+.menu-mobile {
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 132, 130, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*行動版選單 預設關閉 觸發按鈕才會開啟*/
+
+.menu-mobile.active {
+  display: flex;
+}
+/*行動版選單 觸發按鈕後 觸發JS將menu-mobile新增active類別開啟*/
+@media only screen and (min-width: 992px)  {
+
+  .navBar-mobile {
+    display: none;
+  }
+  
+  .navBar {
+    display: flex;
+    
+  }
+}
+/*顯示超過992後 行動版選單會隱藏 一般選單設為定格*/
+
+
+.nav-item {
+  margin: 0 12px;
+  color: white;
+  font-size: 14px;
+}
+
+/*選單文字屬性設定*/
+
+.menu-mobile .nav-item {
+  font-size: 24px;
+  margin: 24px;
+  text-align: center;
+}
+
+/*行動版選單文字屬性設定*/
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  width: 24px;
+  height: 24px;
+}
+
+/*關閉按鈕的屬性設定*/
+
+.sign-up {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 48px;
+  color: white;
+  border-radius: 3px;
+}
+
+.hero-info p {
+  font-size: 20px;
+  color: white;
+}
+
+.hero-info input {
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 3px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-right: 24px;
+}
+
+.hero-info button {
+  height: 40px;
+  width: 150px;
+  background: #FFFFFF;
+  border: 2px solid #2B2B2B;
+  border-radius: 3px;
+}
+
+
+
+/* @media only screen and (min-width: 1200px) and (min-width: 992px)  { */
+@media only screen and (min-width: 992px)  {
+
+  .hero-section {
+    padding-top: 160px;
+  }
+  
+  
+  .hero-info input {
+    width: 250px;
+    height: 48px;
+    margin-right: 24px;
+  }
+
+  .hero-info button {
+    height: 48px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1200px)  {
+  .hero-info input {
+    width: 270px
+  }
+
+  .hero-info button {
+    width: 170px;
+  }
+
+  
+}
